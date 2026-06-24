@@ -22,6 +22,10 @@ export interface AccommodationEntry {
   price?: string;
   notes?: string;
   status: 'UPCOMING' | 'NOW' | 'DONE';
+  nights?: number;
+  priceForStay?: string;
+  amenities?: string[];
+  photoUrl?: string;
 }
 
 const DEFAULT_ACCOMMODATION: AccommodationEntry = {
@@ -35,6 +39,10 @@ const DEFAULT_ACCOMMODATION: AccommodationEntry = {
   checkOutTime: '11:00',
   bookingRef: '#VPU123456',
   status: 'UPCOMING',
+  nights: 4,
+  priceForStay: '€480',
+  amenities: ['WiFi', 'Pool', 'Breakfast', 'AC'],
+  photoUrl: 'https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=600',
 };
 
 interface AppState {
